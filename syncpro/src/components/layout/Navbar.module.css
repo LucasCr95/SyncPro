@@ -1,0 +1,33 @@
+.navbar {
+    width: 100%;
+    background-color: #07070a;
+    padding: .5rem 0;
+}
+
+.logo_container {
+    width: 12rem;
+}
+
+.logo_container img {
+    width: 100%;
+}
+
+.navbar_list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.navbar_list_item a{
+    padding: .7rem 1.2rem;
+    margin-left: 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: .5s;
+    color: white;
+}
+
+.navbar_list_item a:hover {
+    color: #F2B705;
+    background-color: #131318;
+}

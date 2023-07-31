@@ -15,7 +15,7 @@ export default function Navbar() {
 
                 <ul className={ styles.navbar_list }>
                     <li className={ styles.navbar_list_item }>
-                        <Link exact to="/">Home</Link>
+                        <Link to="/">Home</Link>
                     </li>
                     <li className={ styles.navbar_list_item }>
                         <Link to="/projects">Projetos</Link>
@@ -29,6 +29,5 @@ export default function Navbar() {
                 </ul>
             </Container>
         </nav>
-        
     )
 }

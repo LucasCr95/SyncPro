@@ -1,0 +1,25 @@
+.newproject_container {
+    width: 100%;
+    display: flex;
+}
+
+.newproject_tile_container,
+.newproject_form_container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.newproject_tile_container h1 {
+    font-size: 2.5rem;
+    width: fit-content;
+    padding: .2rem 0;
+    border-bottom: 1px solid #555555;
+    margin-bottom: 2rem;
+}
+
+.newproject_tile_container p {
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+}

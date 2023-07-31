@@ -14,19 +14,18 @@ import Footer from "./components/layout/Footer"
 export default function App() {
   return (
       <Router>
-       <Navbar />
-        <Container customClass='min_height'>
-         <Routes>
-           <Route exact path='/' element={<Home />} />
-           <Route path='/company' element={<Company />} />
-           <Route path='/contact' element={<Contact />} />
-           <Route path='/newproject' element={<NewProject />} />
-           <Route path='/projects' element={<Projects />} />
-           <Route path='/project' element={<Project />} />
-         </  Routes>
-        </Container>
-       <Footer />
+        <Navbar />
+          <Container customClass='min_height'>
+            <Routes>
+              <Route exact path='/' element={<Home />} />
+              <Route path='/company' element={<Company />} />
+              <Route path='/contact' element={<Contact />} />
+              <Route path='/newproject' element={<NewProject />} />
+              <Route path='/projects' element={<Projects />} />
+              <Route path='/project' element={<Project />} />
+            </Routes>
+          </Container>
+        <Footer />
       </Router>
-   
   )
 }

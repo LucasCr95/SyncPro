@@ -1,0 +1,27 @@
+.project_card {
+   border: 1px solid gray;
+   padding: 1rem;
+   text-align: left;
+   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.555);
+   border-radius: 5px;
+}
+
+.project_card h2{
+   font-size: 1.3rem;
+   font-weight: normal;
+   border-bottom: 1px solid gray;
+}
+
+.project_card p {
+   margin-top: .2rem;
+}
+
+.actions_container {
+   border: 1px solid gray;
+   text-align: center;
+   margin-top: 1rem;
+   padding: .5rem;
+   border-radius: 5px;
+   display: flex;
+   justify-content: space-around;
+}

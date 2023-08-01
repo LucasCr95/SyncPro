@@ -6,18 +6,15 @@ export default function Message({ msg, type }) {
    const [ visible, setVisible ] = useState(false)
 
    useEffect(() => {
-      if(!msg) {
-         setVisible(false)
-         return
+      if(msg) {
+         setVisible(true)
+
+         const timer = setTimeout(() => { 
+            setVisible(false)
+         }, 2000)
+         return () => clearTimeout(timer)
       }
-
-      setVisible(true)
-
-      const timer = setTimeout(() => { 
-         setVisible(false)
-      }, 2000)
-
-      return () => clearTimeout(timer)
+      return
    }, [ msg ])
 
    return(

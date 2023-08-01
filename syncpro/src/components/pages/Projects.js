@@ -1,6 +1,7 @@
 import { useLocation } from 'react-router-dom'
 
 import Message from '../layout/Message'
+import LinkButton from '../layout/LinkButton'
 
 import styles from './Projects.module.css'
 
@@ -13,12 +14,13 @@ export default function Project() {
 
     return (
       <div className={ styles.projects_container }>
-         <Message msg={ message } type='sucess' />
-         <div className={ styles.title_container }>
+         {message && <Message msg={ message } type='sucess' />}
+         <div className={ styles.projects_title_container }>
             <h1>Projetos</h1>
+            <LinkButton txtBtn='Novo Projeto' to='/newproject'/>
          </div>
-         <div className={ styles.container_projects_cards }>
-
+         <div className={ styles.projects_cards_container }>
+            
          </div>
       </div>
     )

@@ -6,6 +6,7 @@
     cursor: pointer;    
     transition: .5s;
     text-decoration: none;
+    height: fit-content;
 }
 
 .btn:hover {

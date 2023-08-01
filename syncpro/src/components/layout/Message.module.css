@@ -1,0 +1,19 @@
+.msg_container {
+   width: 100%;
+   padding: 1rem 0;
+   margin: .5rem 0 1rem;
+   text-align: center;
+   border-radius: 5px;
+}
+
+.sucess {
+   background-color: #b2f3b2;
+   color: #1e691e;
+   border: 1px solid #1e691e;
+}
+
+.error {
+   background-color: #f3bcbc;
+   color: #921d1d;
+   border: 1px solid #921d1d;
+}

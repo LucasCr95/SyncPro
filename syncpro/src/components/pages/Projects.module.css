@@ -1,0 +1,23 @@
+.projects_container {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+}  
+
+.title_container {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   padding: 1rem;
+}
+.title_container h1 {
+   font-size: 2.5rem;
+   width: fit-content;
+   padding: .2rem 0;
+   border-bottom: 1px solid #555555;
+   margin-bottom: 1rem;
+}
+
+.container_projects_cards {
+   width: 100%;
+}

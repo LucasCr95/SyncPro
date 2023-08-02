@@ -1,27 +1,75 @@
 .project_card {
-   border: 1px solid gray;
-   padding: 1rem;
+   padding: 1rem 2rem;
    text-align: left;
-   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.555);
-   border-radius: 5px;
+   margin: .5rem;
+   border-radius: 5px;  
+   border: 1px solid #0f0f0f;
 }
 
 .project_card h2{
    font-size: 1.3rem;
-   font-weight: normal;
-   border-bottom: 1px solid gray;
+   padding-bottom: .3rem;
+   border-bottom: 1px solid #0f0f0f;
+   margin-bottom: 1rem;
 }
 
 .project_card p {
-   margin-top: .2rem;
+   margin-bottom: .5rem;
 }
 
-.actions_container {
-   border: 1px solid gray;
-   text-align: center;
+.span_budget {
+   font-weight: bold;
+} 
+
+.text_category {
+   display: inline-block;
+   margin-right: .5rem;
+   width: 12px;
+   height: 12px;
+   border-radius: 50%;
+   background-color: transparent;
+}
+
+.infra {
+   background-color: #7facf0;
+}
+
+.design {
+   background-color: #f07fc5;
+}
+
+.desenvolvimento {
+   background-color: #dbf07f;
+}
+
+.planejamento {
+   background-color: #f0a87f;
+}
+
+.project_card_actions {
    margin-top: 1rem;
-   padding: .5rem;
-   border-radius: 5px;
    display: flex;
-   justify-content: space-around;
+   justify-content: space-between;
+}
+
+.btn_actions {
+   padding: .5rem 1.2rem;
+   color: #0f0f0f;
+   border-radius: 5px;
+   cursor: pointer;    
+   transition: .5s;
+   text-decoration: none;
+   height: fit-content;
+   border: none;
+   border: 1px solid #0f0f0f;
+   font-size: 1rem;
+}
+
+.btn_actions svg {
+   margin-right: .5rem;
+}
+
+.btn_actions:hover {
+   color: #F2B705;
+   background-color: #131318;
 }

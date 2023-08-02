@@ -47,6 +47,7 @@ export default function Project() {
                    id={ project.id }
                    budget={ project.budget }
                    category={ project.category.name }
+                   key={ project.id }
                   />
                ))}
          </div>

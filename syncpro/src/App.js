@@ -20,9 +20,9 @@ export default function App() {
               <Route exact path='/' element={<Home />} />
               <Route path='/company' element={<Company />} />
               <Route path='/contact' element={<Contact />} />
-              <Route path='/newproject' element={<NewProject />} />
               <Route path='/projects' element={<Projects />} />
-              <Route path='/project' element={<Project />} />
+              <Route path='/newproject' element={<NewProject />} />
+              <Route path='/project/:id' element={<Project />} />
             </Routes>
           </Container>
         <Footer />

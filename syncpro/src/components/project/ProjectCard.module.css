@@ -1,5 +1,6 @@
 .project_card {
-   padding: 1rem 2rem;
+   width: 23%;
+   padding: 1rem;
    text-align: left;
    margin: .5rem;
    border-radius: 5px;  
@@ -53,7 +54,7 @@
 }
 
 .btn_actions {
-   padding: .5rem 1.2rem;
+   padding: .5rem 1rem;
    color: #0f0f0f;
    border-radius: 5px;
    cursor: pointer;    

@@ -1,17 +1,6 @@
 {
   "projects": [
     {
-      "name": "Projeto Samsumg ",
-      "budget": "10000",
-      "category": {
-        "id": "2",
-        "name": "Design"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 1
-    },
-    {
       "name": "Projeto HiperCompras",
       "budget": "20000",
       "category": {
@@ -56,17 +45,6 @@
       "id": 5
     },
     {
-      "name": "Projeto NVM Car",
-      "budget": "20000",
-      "category": {
-        "id": "4",
-        "name": "Planejamento"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 6
-    },
-    {
       "name": "Projeto VM Moveis",
       "budget": "50000",
       "category": {
@@ -78,11 +56,11 @@
       "id": 7
     },
     {
-      "name": "SymPlan",
-      "budget": "40000",
+      "name": "Doc Office",
+      "budget": "4000",
       "category": {
-        "id": "3",
-        "name": "Desenvolvimento"
+        "id": "1",
+        "name": "Infra"
       },
       "cost": 0,
       "services": [],

@@ -1,24 +1,67 @@
 .project_container {
    width: 100%;
+}
+
+.info_container {
+   border-bottom: 1px solid #808080;
+}
+
+.info_container,
+.services_container {
+   width: 100%;
+   padding: 2rem 0;
    display: flex;
 }
 
-.title_container {
+.details_container,
+.form_container,
+.details_services,
+.form_services {
    width: 50%;
-   padding: 3rem 0;
-   border: 1px solid black;
 }
 
-.content_container {
-   width: 50%;
-   padding: 3rem 0;
-   border: 1px solid black;
+.details_container h1,
+.services_container h2 {
+   font-size: 1.5rem;
+   padding-bottom: .2rem;
+   margin-bottom: .8rem;
+   width: fit-content;
+   border-bottom: 1px solid #808080;
+}
+.details_container p,
+.details_services p {
+   margin-bottom: .5rem;
 }
 
-.btn_container {
-   width: 100%;
-   background-color: white;
+.details_container p span {
+   font-weight: bold;
+}
+
+.form_container,
+.form_services {
    display: flex;
    flex-direction: column;
-   justify-content: flex-end;
+   align-items: flex-end;
+}
+
+.form_edit,
+.service_edit {
+   width: 100%;
+}
+
+.btn {
+   text-decoration: none;
+   padding: .7rem 1.2rem;
+   background-color: #07070a;
+   color: #ffffff;
+   border-radius: 5px;
+   margin-bottom: 1rem;
+   cursor: pointer;    
+   border: none;
+   transition: .5s;
+}
+
+.btn:hover {
+   color: #F2B705;
+   background-color: #131318;
 }

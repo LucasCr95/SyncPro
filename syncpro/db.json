@@ -1,8 +1,8 @@
 {
   "projects": [
     {
-      "name": "Projeto HiperCompras",
-      "budget": "20000",
+      "name": "HiperComp",
+      "budget": "10000",
       "category": {
         "id": "1",
         "name": "Infra"
@@ -12,7 +12,7 @@
       "id": 2
     },
     {
-      "name": "Projeto BigBurguer",
+      "name": "BigBurguer",
       "budget": "10000",
       "category": {
         "id": "3",
@@ -59,8 +59,8 @@
       "name": "Doc Office",
       "budget": "4000",
       "category": {
-        "id": "1",
-        "name": "Infra"
+        "id": "4",
+        "name": "Planejamento"
       },
       "cost": 0,
       "services": [],

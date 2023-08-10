@@ -2,10 +2,10 @@
   "projects": [
     {
       "name": "HiperComp",
-      "budget": "10000",
+      "budget": "12000",
       "category": {
-        "id": "1",
-        "name": "Infra"
+        "id": "2",
+        "name": "Design"
       },
       "cost": 0,
       "services": [],

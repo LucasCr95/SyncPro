@@ -1,8 +1,10 @@
 import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
+import {parse, v4 as uuidv4 } from 'uuid'
 
 import Loading from '../layout/Loading'
 import ProjectForm from '../project/ProjectForm'
+import ServiceForm from '../service/ServiceForm'
 import Message from '../layout/Message'
 
 import styles from './Project.module.css'
@@ -32,9 +34,11 @@ export default function Project() {
    }, [ id ])
 
    function editPost(project) {
+      setMessage('')
+
       // budget validation
       if(project.budget < project.cost){
-         setMessage('Não há orçamento para esse serviço!')
+         setMessage('Orçamento menor que o custo do projeto!')
          setType('error')
          return
       }
@@ -55,6 +59,25 @@ export default function Project() {
          setType('sucess')
       })
       .catch(err => console.log(err))
+   }
+
+   function createService(project) {
+      setMessage('') 
+
+      //last service
+      const lastService = project.services[project.services.length - 1]
+      lastService.id = uuidv4()
+
+      const lastServiceCost = lastService.cost
+      const newCost = parseFloat(project.cost) + parseFloat(lastServiceCost)
+
+      // maximium value validation
+      if(newCost > parseFloat(project.budget)) {
+         setMessage('Orçamento indisponível!')
+         setType('error')
+         project.services.pop()
+         return
+      }
    }
 
    function toggleProjectForm() {
@@ -95,11 +118,6 @@ export default function Project() {
                <div className={ styles.services_container }>
                   <div className={ styles.details_services }>
                      <h2>Serviços</h2>
-                     <p>Serviços</p>
-                     <p>Serviços</p>
-                     <p>Serviços</p>
-                     <p>Serviços</p>
-                     <p>Serviços</p>
                   </div>
                   <div className={ styles.form_services}>
                      <button onClick={ toggleServiceForm } className={ styles.btn }>
@@ -107,7 +125,11 @@ export default function Project() {
                      </button>
                      {showServiceForm && (
                         <div className={ styles.service_edit }>
-                        Formulario de Serviços
+                        <ServiceForm 
+                         handleSubmit={ createService }
+                         txtBtn='Adicionar Serviço'
+                        projectData={ project }
+                        />
                         </div>
                      )}
                   </div>

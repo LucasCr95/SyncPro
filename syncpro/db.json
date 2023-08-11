@@ -2,13 +2,38 @@
   "projects": [
     {
       "name": "HiperComp",
-      "budget": "12000",
+      "budget": "13000",
       "category": {
         "id": "2",
         "name": "Design"
       },
-      "cost": 0,
-      "services": [],
+      "cost": 13000,
+      "services": [
+        {
+          "name": "ASDASDASD",
+          "cost": "5000",
+          "description": "adasdasd",
+          "id": "09c6f738-cb55-4d38-8300-42f378e3de09"
+        },
+        {
+          "name": "Contratar Design UX",
+          "cost": "5000",
+          "description": "..........................................",
+          "id": "53d15ad0-8c4e-4fae-a064-da6300509846"
+        },
+        {
+          "name": "Contratar Design UX",
+          "cost": "1000",
+          "description": "..........................................",
+          "id": "26272f41-3106-4f67-ae01-f1e7863dd473"
+        },
+        {
+          "name": "Contratar social media",
+          "cost": "2000",
+          "description": "asdasdasdas",
+          "id": "407a71bb-262d-41fc-b124-7b5f81d9d500"
+        }
+      ],
       "id": 2
     },
     {
@@ -18,8 +43,21 @@
         "id": "3",
         "name": "Desenvolvimento"
       },
-      "cost": 0,
-      "services": [],
+      "cost": 4000,
+      "services": [
+        {
+          "name": "asdasdas",
+          "cost": "2000",
+          "description": "sadasda",
+          "id": "bcdc158e-92b1-4cd3-93dc-ae39b21b0234"
+        },
+        {
+          "name": "asdasdas",
+          "cost": "2000",
+          "description": "sadasda",
+          "id": "bcdc158e-92b1-4cd3-93dc-ae39b21b0234"
+        }
+      ],
       "id": 3
     },
     {

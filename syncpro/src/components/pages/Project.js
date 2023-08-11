@@ -1,10 +1,11 @@
 import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import {parse, v4 as uuidv4 } from 'uuid'
+import { parse, v4 as uuidv4 } from 'uuid'
 
 import Loading from '../layout/Loading'
 import ProjectForm from '../project/ProjectForm'
 import ServiceForm from '../service/ServiceForm'
+import ServiceCard from '../service/ServiceCard'
 import Message from '../layout/Message'
 
 import styles from './Project.module.css'
@@ -12,6 +13,7 @@ import styles from './Project.module.css'
 export default function Project() {
    const { id } = useParams()
    const [ project, setProject ] = useState([])
+   // const [ services, setServices ] = useState({})
    const [ showProjectForm, setShowProjectForm ] = useState(false)
    const [ showServiceForm, setShowServiceForm ] = useState(false)
    const [ message, setMessage ] = useState()
@@ -62,10 +64,10 @@ export default function Project() {
    }
 
    function createService(project) {
-      setMessage('') 
+      setMessage('')
 
       //last service
-      const lastService = project.services[project.services.length - 1]
+      const lastService = project.services[ project.services.length - 1 ]
       lastService.id = uuidv4()
 
       const lastServiceCost = lastService.cost
@@ -76,8 +78,25 @@ export default function Project() {
          setMessage('Orçamento indisponível!')
          setType('error')
          project.services.pop()
-         return
+         return false
       }
+
+      // add service cost to project total cost
+      project.cost = newCost
+
+      fetch(`http://localhost:5000/projects/${project.id}`, {
+         method: 'PATCH',
+         headers: {
+            'Content-Type' : 'application/json'
+         },
+         body: JSON.stringify(project)
+      })
+      .then((resp) => resp.json())
+      .then((data) => {
+         setMessage('Serviço adicionado')
+         setType('sucess')
+      })
+      .catch((err) => console.log(err))
    }
 
    function toggleProjectForm() {
@@ -118,6 +137,18 @@ export default function Project() {
                <div className={ styles.services_container }>
                   <div className={ styles.details_services }>
                      <h2>Serviços</h2>
+                     {project.services && (
+                        project.services.map((service) => (
+                           <ServiceCard 
+                            name={ service.name }
+                            id={ service.id }
+                            cost={ service.cost }
+                            description={ service.description }
+                            key={ service.id }
+                           //  handleRemove={ removeService }
+                           />
+                        ))
+                     )}
                   </div>
                   <div className={ styles.form_services}>
                      <button onClick={ toggleServiceForm } className={ styles.btn }>
@@ -125,11 +156,11 @@ export default function Project() {
                      </button>
                      {showServiceForm && (
                         <div className={ styles.service_edit }>
-                        <ServiceForm 
-                         handleSubmit={ createService }
-                         txtBtn='Adicionar Serviço'
-                        projectData={ project }
-                        />
+                           <ServiceForm 
+                            handleSubmit={ createService }
+                            txtBtn='Adicionar Serviço'
+                            projectData={ project }
+                           />
                         </div>
                      )}
                   </div>

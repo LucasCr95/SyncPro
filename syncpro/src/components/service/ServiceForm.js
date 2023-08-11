@@ -1,13 +1,13 @@
-import { useState } from "react"
+import { useState } from 'react'
 
-import Input from "../form/Input"
+import Input from '../form/Input'
 import SubmitButton from "../form/SubmitButton"
 
 import styles from '../project/ProjectForm.module.css'
 
 export default function ServiceForm({ txtBtn, handleSubmit, projectData }) {
 
-   const [ service, setService ] = useState([])
+   const [ service, setService ] = useState({})
 
    function submit(e) {
       e.preventDefault()   
@@ -40,9 +40,9 @@ export default function ServiceForm({ txtBtn, handleSubmit, projectData }) {
          />
          <Input 
           type='text'
-          text='Detalhes'
-          name='details'
-          placeholder='Insira detalhes do serviço'
+          text='Descrição'
+          name='description'
+          placeholder='Descreva o serviço'
           handleOnChange={ handleChange }
          />
          <SubmitButton textBtn={ txtBtn } />

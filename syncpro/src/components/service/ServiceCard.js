@@ -4,23 +4,24 @@ import styles from './ServiceCard.module.css'
 
 export default function ServiceCard({ id, name, cost, description, handleRemove }) {
    
-  /*  const remove = (e) => {
+   const remove = (e) => {
       e.preventDefault()
       handleRemove(id)
-   } */
+   }
 
    return(
       <div className={ styles.service_card }>
          <div>
             <p><span>Serviço</span>: { name }</p>
-            <p><span>Custo</span>: { cost }</p>
+            <p><span>Custo</span>: R$ { cost }</p>
             <p><span>Descrição</span>: { description }</p>
          </div>
          <div 
-         //  onClick={ remove } 
           className={ styles.service_card_action }
          >
-            <BsFillTrashFill />
+            <button onClick={ remove }>
+               <BsFillTrashFill />
+            </button>
          </div>
       </div>
    )

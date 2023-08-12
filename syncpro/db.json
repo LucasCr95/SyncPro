@@ -67,8 +67,15 @@
         "id": "2",
         "name": "Design"
       },
-      "cost": 0,
-      "services": [],
+      "cost": 2000,
+      "services": [
+        {
+          "name": "asdasdas",
+          "cost": "2000",
+          "description": "dasdasd",
+          "id": "af6fae1b-40ca-4a45-9970-cd7acc8277d4"
+        }
+      ],
       "id": 4
     },
     {
@@ -78,8 +85,15 @@
         "id": "3",
         "name": "Desenvolvimento"
       },
-      "cost": 0,
-      "services": [],
+      "cost": 1000,
+      "services": [
+        {
+          "name": "sadas",
+          "cost": "1000",
+          "description": "asdasd",
+          "id": "35f5c209-e83b-449c-93b6-92d577bc48e1"
+        }
+      ],
       "id": 5
     },
     {

@@ -13,7 +13,7 @@ import styles from './Project.module.css'
 export default function Project() {
    const { id } = useParams()
    const [ project, setProject ] = useState([])
-   // const [ services, setServices ] = useState({})
+   const [ services, setServices ] = useState({})
    const [ showProjectForm, setShowProjectForm ] = useState(false)
    const [ showServiceForm, setShowServiceForm ] = useState(false)
    const [ message, setMessage ] = useState()
@@ -30,6 +30,7 @@ export default function Project() {
          .then(resp => resp.json())
          .then((data) => {
             setProject(data)
+            setServices(data.services)
          })
          .catch(err => console.log(err))
       }, 2000)
@@ -99,6 +100,22 @@ export default function Project() {
       .catch((err) => console.log(err))
    }
 
+   function removeService() {
+      fetch(`http://localhost:5000/projects/services/${services.id}`, {
+         method: 'DELETE',
+         headers: {
+            'Content-Type' : 'application/json'
+         }
+      })
+         .then((resp) => resp.json())
+         .then((data) => {
+            setMessage('Projeto removido com sucesso')
+            setType('sucess')
+         })
+         .catch((err) => console.log(err))
+
+   }
+
    function toggleProjectForm() {
       setShowProjectForm(!showProjectForm)
    }
@@ -115,7 +132,7 @@ export default function Project() {
                <div className={ styles.info_container }>
                   <div className={ styles.details_container }>
                      <h1>{ project.name }</h1>
-                     <p><span>Orçamento</span>: { project.budget }</p>
+                     <p><span>Orçamento</span>: R$ { project.budget }</p>
                      <p><span>Categoria</span>: { project.category.name }</p>
                      <p><span>Total utilizado</span>: { project.cost }</p>
                   </div>
@@ -137,18 +154,21 @@ export default function Project() {
                <div className={ styles.services_container }>
                   <div className={ styles.details_services }>
                      <h2>Serviços</h2>
-                     {project.services && (
-                        project.services.map((service) => (
+                     {services && (
+                        services.map((service) => (
                            <ServiceCard 
-                            name={ service.name }
                             id={ service.id }
+                            name={ service.name }
                             cost={ service.cost }
                             description={ service.description }
                             key={ service.id }
-                           //  handleRemove={ removeService }
+                            handleRemove={ removeService }
                            />
                         ))
                      )}
+                     {services.length === 0 &&
+                        <p>Não há serviços</p>
+                     }
                   </div>
                   <div className={ styles.form_services}>
                      <button onClick={ toggleServiceForm } className={ styles.btn }>

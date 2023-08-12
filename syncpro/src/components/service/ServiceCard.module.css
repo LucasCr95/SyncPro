@@ -1,14 +1,18 @@
 .service_card {
-   border-bottom: 1px solid #ccc;
+   border: 1px solid gray;
    margin-top: 1rem;
-   padding: 1rem 1rem 1rem 0;
-   
+   padding: 1rem;
+   border-radius: 5px;
    display: flex;
    justify-content: space-between;
 }
 
 .service_card span {
    font-weight: bold;
+}
+
+.service_card_action button {
+   border: none;
 }
 
 .service_card_action svg {

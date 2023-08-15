@@ -73,7 +73,7 @@ export default function Project() {
                ))
             }
             {!removeLoading && <Loading />}
-            {removeLoading && projects.legth === 0 && (
+            {removeLoading && projects.length === 0 && (
                <p>Não há projetos cadastrados</p>
             )}
 

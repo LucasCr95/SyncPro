@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import { parse, v4 as uuidv4 } from 'uuid'
+import { v4 as uuidv4 } from 'uuid'
 
 import Loading from '../layout/Loading'
 import ProjectForm from '../project/ProjectForm'
@@ -96,24 +96,36 @@ export default function Project() {
       .then((data) => {
          setMessage('Serviço adicionado')
          setType('sucess')
+         setShowServiceForm(false)
       })
       .catch((err) => console.log(err))
    }
 
-   function removeService() {
-      fetch(`http://localhost:5000/projects/services/${services.id}`, {
-         method: 'DELETE',
-         headers: {
-            'Content-Type' : 'application/json'
-         }
-      })
-         .then((resp) => resp.json())
-         .then((data) => {
-            setMessage('Projeto removido com sucesso')
-            setType('sucess')
-         })
-         .catch((err) => console.log(err))
+   function removeService(id, cost) {
+      const serviceUpdated = project.services.filter(
+         (service) => service.id !== id
+      )
+      
+      const projectUpdated = project
 
+      projectUpdated.services = serviceUpdated
+      projectUpdated.cost = parseFloat(projectUpdated.cost) - parseFloat(cost)
+      
+      fetch(`http://localhost:5000/projects/${projectUpdated.id}`, {
+         method: 'PATCH',
+         headers: {
+            'Content-type' : 'application/json'
+         },
+         body: JSON.stringify(projectUpdated)
+      })
+      .then((resp) => resp.json())
+      .then((data) => {
+         setProject(projectUpdated)
+         setServices(serviceUpdated)
+         setMessage('Serviço removido')
+         setType('sucess')
+      })
+      .catch((err) => console.log(err))
    }
 
    function toggleProjectForm() {

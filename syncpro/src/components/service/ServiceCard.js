@@ -6,7 +6,7 @@ export default function ServiceCard({ id, name, cost, description, handleRemove 
    
    const remove = (e) => {
       e.preventDefault()
-      handleRemove(id)
+      handleRemove(id, cost)
    }
 
    return(

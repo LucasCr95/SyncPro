@@ -1,0 +1,29 @@
+.contact_container {
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+}
+
+.contact_container div h1 {
+   font-size: 2.5rem;
+   width: fit-content;
+   padding: .2rem 0;
+   border-bottom: 1px solid #555555;
+}
+
+.contact_container div {
+   display: flex;
+   align-items: center;
+   width: 48%;
+}
+
+.info_contact_container {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+.info_contact_container a svg {
+   display: inline-block;
+}

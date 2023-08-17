@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 
 import Container from './Container'
 
-import logo from '../../img/logo-name.png'
+import logoname from '../../img/logo-name.png'
+import logo from '../../img/logo.png'
 import styles from './Navbar.module.css'
 
 export default function Navbar() {
@@ -10,7 +11,10 @@ export default function Navbar() {
         <nav className={ styles.navbar }>
             <Container >
                 <div className={ styles.logo_container}>
-                    <img src={ logo } alt="Logotipo SyncPro" />
+                     <picture>
+                        <source src={ logo } media="(max-width: 400px)" alt='logotipo' />
+                        <img src={ logoname } alt="Logotipo SyncPro" />
+                     </picture>
                 </div>
 
                 <ul className={ styles.navbar_list }>

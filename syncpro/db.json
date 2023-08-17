@@ -7,15 +7,8 @@
         "id": "3",
         "name": "Desenvolvimento"
       },
-      "cost": 5000,
-      "services": [
-        {
-          "name": "Contratar um UI/UX Design",
-          "cost": "5000",
-          "description": "Criar a interface do app e da landing page",
-          "id": "cb9ac40f-ba14-4305-9895-a482ccbb06e3"
-        }
-      ],
+      "cost": 0,
+      "services": [],
       "id": 1
     },
     {

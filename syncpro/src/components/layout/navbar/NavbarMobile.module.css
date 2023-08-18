@@ -1,0 +1,60 @@
+.navbar {
+   width: 100%;
+   background-color: #07070a;
+   padding: .7rem 1rem;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   flex-wrap: wrap;
+   transition: all .5s;
+
+}
+
+.logo_container {
+   width: 25px;
+}
+
+.logo_container img {
+   width: 100%;
+}
+
+.menu_container svg {
+   font-size: 2rem;
+   color: #fff;
+   cursor: pointer;
+}
+
+.navbar_list {
+   width: 100%;
+   text-align: center;
+   list-style: none;
+   padding: 0;
+   overflow: hidden;
+   transition: all .5s;
+}
+
+.disable {
+   max-height: 0;
+}
+
+.enable {
+   height: fit-content;
+}
+
+.navbar_list_item {
+   width: 100%;
+}
+
+.navbar_list_item a{
+   width: 100%;
+   display: block;
+   padding: .7rem 0;
+   text-decoration: none;
+   transition: .5s;
+   color: white;
+}
+
+.navbar_list_item a:hover {
+   color: #F2B705;
+   background-color: #131318;
+}

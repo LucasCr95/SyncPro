@@ -1,13 +1,19 @@
 .navbar {
    width: 100%;
+   position: absolute;
+   top: 0;
+}
+
+.menu_logo_container {
+   width: 100%;
    background-color: #07070a;
-   padding: .7rem 1rem;
+   height: 4rem;
+   padding: 0 1rem;
    display: flex;
    justify-content: space-between;
    align-items: center;
-   flex-wrap: wrap;
-   transition: all .5s;
-
+   position: relative;
+   z-index: 1;
 }
 
 .logo_container {
@@ -30,15 +36,17 @@
    list-style: none;
    padding: 0;
    overflow: hidden;
-   transition: all .5s;
+   transition: all 1s ease;
+   background-color: #07070a;
+   padding: .5rem 0;
 }
 
-.disable {
-   max-height: 0;
+.false {
+   transform: translateY(-100%);
 }
 
-.enable {
-   height: fit-content;
+.true {
+   transform: translateY(0);
 }
 
 .navbar_list_item {
@@ -57,4 +65,11 @@
 .navbar_list_item a:hover {
    color: #F2B705;
    background-color: #131318;
+}
+
+
+@media screen and (min-width: 425px) {
+   .menu_logo_container {
+      padding: 0 2rem;
+   }
 }

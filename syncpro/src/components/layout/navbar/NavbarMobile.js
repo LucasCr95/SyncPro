@@ -8,29 +8,27 @@ import styles from './NavbarMobile.module.css'
 
 export default function NavbarMobile() {
    const [isToggled, setIsToggled] = useState(false);
-   const [ mode, setMode ] = useState('')
+   const [ mode, setMode ] = useState(false)
 
-   const handleClick = () => {
+   function handleClick() {
       setIsToggled(!isToggled);
-      (isToggled ? (
-         setMode('enable')
-      ) : (
-         setMode('disable')
-      ))
-   };
+      setMode(!mode)
+   }
+   
 
    return(
       <nav className={ styles.navbar }>
-         <div className={ styles.logo_container }>
-            <img src={ logo } alt="Logotipo SyncPro" />
+         <div className={ styles.menu_logo_container }>
+            <div className={ styles.logo_container }>
+               <img src={ logo } alt="Logotipo SyncPro" />
+            </div>
+            <div 
+            onClick={ handleClick }
+            className={ styles.menu_container }
+            >
+               <AiOutlineMenu />
+            </div>
          </div>
-         <div 
-          onClick={ handleClick  }
-          className={ styles.menu_container }
-         >
-            <AiOutlineMenu />
-         </div>
-
          <ul className={`${ styles.navbar_list } ${ styles[ mode ]}`}>
             <li className={ styles.navbar_list_item }>
                <Link to="/">Home</Link>

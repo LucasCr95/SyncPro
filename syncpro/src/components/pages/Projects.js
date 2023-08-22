@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import Message from '../layout/Message'
 import Loading from '../layout/Loading'
 import ProjectCard from '../project/ProjectCard'
+import LinkButton from '../layout/LinkButton'
 
 import styles from './Projects.module.css'
 
@@ -56,6 +57,7 @@ export default function Project() {
          {projectMessage && <Message msg={ projectMessage } type='sucess' />}
          <div className={ styles.projects_title_container }>
             <h1>Projetos</h1>
+            <LinkButton txtBtn='+' to='/newproject' />
          </div>
          <div className={ styles.projects_cards_container }>
             {projects.length > 0 && 

@@ -1,20 +1,20 @@
 .form_control {
-    display: flex;
-    flex-direction: column;
+   display: flex;
+   flex-direction: column;
 }
 
 .form_control label {
-    margin-bottom: .5rem;
-    font-weight: bold;
+   margin-bottom: .5rem;
+   font-weight: bold;
 }
 
 .form_control input {
-    padding: .7rem;
-    border: none;
-    border-radius: 5px;
-    margin-bottom: 1rem;
+   padding: .7rem;
+   border: none;
+   border-radius: 5px;
+   margin-bottom: 1rem;
 }
 
 .form_control input:focus {
-    outline-color: #F2B705;
+   outline-color: #F2B705;
 }

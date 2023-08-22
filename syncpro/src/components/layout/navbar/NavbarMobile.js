@@ -5,6 +5,7 @@ import { AiOutlineMenu } from 'react-icons/ai'
 import logo from '../../../img/logo.png'
 
 import styles from './NavbarMobile.module.css'
+import Container from '../Container'
 
 export default function NavbarMobile() {
    const [ mode, setMode ] = useState(false)
@@ -16,6 +17,7 @@ export default function NavbarMobile() {
 
    return(
       <nav className={ styles.navbar }>
+         <Container>
          <div className={ styles.menu_logo_container }>
             <div className={ styles.logo_container }>
                <img src={ logo } alt="Logotipo SyncPro" />
@@ -53,6 +55,7 @@ export default function NavbarMobile() {
                >Contato</Link>
             </li>
          </ul>
+         </Container>
       </nav>
    )
 }

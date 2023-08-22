@@ -30,6 +30,12 @@
    font-size: .9rem;
 }
 
+.btn_container {
+   width: 100%;
+   height: fit-content;
+   background-color: #F2B705;
+}
+
 .home_img_container {
    display: flex;
    align-items: center;

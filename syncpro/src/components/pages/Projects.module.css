@@ -3,13 +3,13 @@
    display: flex;
    flex-direction: column;
    margin-top: 3.5rem;
+   padding: 2rem 1rem 0;
 }  
 
 .projects_title_container {
    width: 100%;
    display: flex;
    justify-content: space-between;
-   padding: 2rem 1rem 0;
 }
 
 .projects_title_container h1 {
@@ -21,9 +21,9 @@
 }
 
 .projects_cards_container {
-   padding: 2rem 0;
    width: 100%;
    display: flex;
    justify-content: center;
    flex-wrap: wrap;
+   margin: 0 auto;
 }

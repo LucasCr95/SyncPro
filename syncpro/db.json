@@ -2,7 +2,7 @@
   "projects": [
     {
       "name": "Novo site",
-      "budget": "10000",
+      "budget": "19000",
       "category": {
         "id": "3",
         "name": "Desenvolvimento"
@@ -39,6 +39,17 @@
       "cost": 0,
       "services": [],
       "id": 3
+    },
+    {
+      "name": "Troca de monitores",
+      "budget": "10000",
+      "category": {
+        "id": "1",
+        "name": "Infra"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 4
     }
   ],
   "categories": [

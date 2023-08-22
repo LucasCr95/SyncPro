@@ -8,7 +8,7 @@ import styles from './NavbarDesktop.module.css'
 export default function NavbarDesktop() {
    return (
       <nav className={ styles.navbar }>
-         <Container >
+         <Container>
             <div className={ styles.logo_container}>
                <img src={ logoFull } alt="Logotipo SyncPro" />
             </div>

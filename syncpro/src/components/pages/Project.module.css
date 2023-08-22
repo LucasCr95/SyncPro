@@ -1,24 +1,26 @@
 .project_container {
    width: 100%;
+   margin-top: 3.5rem;
+   padding: 2rem 1rem;
 }
 
 .info_container {
    border-bottom: 1px solid #808080;
+   margin-bottom: 1rem;
 }
 
 .info_container,
 .services_container {
    width: 100%;
-   padding: 2rem 0;
    display: flex;
-   justify-content: space-between;
+   flex-direction: column;
 }
 
 .details_container,
 .form_container,
 .details_services,
 .form_services {
-   width: 48%;
+   width: 100%;
 }
 
 .details_container h1,
@@ -52,11 +54,12 @@
 
 .btn {
    text-decoration: none;
-   padding: .7rem 1.2rem;
+   padding: .7rem 1rem;
+   width: fit-content;
    background-color: #07070a;
    color: #ffffff;
    border-radius: 5px;
-   margin-bottom: 1rem;
+   margin: 1rem 0;
    cursor: pointer;    
    border: none;
    transition: .5s;

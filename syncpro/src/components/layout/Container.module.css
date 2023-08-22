@@ -18,3 +18,9 @@
 .min_height {
    min-height: 75%;
 }
+
+@media screen and (min-width: 768px) {
+   .container {
+      width: min(1200px, 100%);
+   }
+}

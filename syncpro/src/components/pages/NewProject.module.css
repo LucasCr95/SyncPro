@@ -1,25 +1,22 @@
 .newproject_container {
-    width: 100%;
-    display: flex;
-}
-
-.newproject_tile_container,
-.newproject_form_container {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   padding: 2rem 1rem;
+   margin-top: 3.5rem;
 }
 
 .newproject_tile_container h1 {
-   font-size: 2.5rem;
+   font-size: 2rem;
    width: fit-content;
    padding: .2rem 0;
    border-bottom: 1px solid #555555;
-   margin-bottom: 2rem;
+   margin-bottom: 1rem;
 }
 
 .newproject_tile_container p {
-    text-transform: uppercase;
-    letter-spacing: .1rem;
+   text-transform: uppercase;
+   letter-spacing: .1rem;
+   font-size: .9rem;
+   margin-bottom: 2rem;
 }

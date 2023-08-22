@@ -2,7 +2,6 @@ import { useLocation } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 
 import Message from '../layout/Message'
-import LinkButton from '../layout/LinkButton'
 import Loading from '../layout/Loading'
 import ProjectCard from '../project/ProjectCard'
 
@@ -57,7 +56,6 @@ export default function Project() {
          {projectMessage && <Message msg={ projectMessage } type='sucess' />}
          <div className={ styles.projects_title_container }>
             <h1>Projetos</h1>
-            <LinkButton txtBtn='Novo Projeto' to='/newproject'/>
          </div>
          <div className={ styles.projects_cards_container }>
             {projects.length > 0 && 

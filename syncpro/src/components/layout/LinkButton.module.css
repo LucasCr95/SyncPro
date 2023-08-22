@@ -7,15 +7,10 @@
    transition: .5s;
    text-decoration: none;
    height: fit-content;
+   font-size: .8rem;
 }
 
 .btn:hover {
    color: #F2B705;
    background-color: #131318;
-}
-
-@media screen and (max-width: 768px) {
-   .btn {
-      font-size: .9rem;
-   }
 }

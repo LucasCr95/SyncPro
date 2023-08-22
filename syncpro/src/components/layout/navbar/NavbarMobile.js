@@ -7,11 +7,9 @@ import logo from '../../../img/logo.png'
 import styles from './NavbarMobile.module.css'
 
 export default function NavbarMobile() {
-   const [isToggled, setIsToggled] = useState(false);
    const [ mode, setMode ] = useState(false)
 
    function handleClick() {
-      setIsToggled(!isToggled);
       setMode(!mode)
    }
    
@@ -23,24 +21,36 @@ export default function NavbarMobile() {
                <img src={ logo } alt="Logotipo SyncPro" />
             </div>
             <div 
-            onClick={ handleClick }
-            className={ styles.menu_container }
+             onClick={ handleClick }
+             className={ styles.menu_container }
             >
                <AiOutlineMenu />
             </div>
          </div>
          <ul className={`${ styles.navbar_list } ${ styles[ mode ]}`}>
             <li className={ styles.navbar_list_item }>
-               <Link to="/">Home</Link>
+               <Link 
+                to="/" 
+                onClick={ handleClick }
+               >Home</Link>
             </li>
             <li className={ styles.navbar_list_item }>
-               <Link to="/projects">Projetos</Link>
+               <Link 
+                to="/projects" 
+                onClick={ handleClick }
+               >Projetos</Link>
             </li>
             <li className={ styles.navbar_list_item }>
-               <Link to="/company">Sobre</Link>
+               <Link 
+                to="/company" 
+                onClick={ handleClick }
+               >Sobre</Link>
             </li>
             <li className={ styles.navbar_list_item }>
-               <Link to="/contact">Contato</Link>
+               <Link 
+                to="/contact" 
+                onClick={ handleClick }
+               >Contato</Link>
             </li>
          </ul>
       </nav>

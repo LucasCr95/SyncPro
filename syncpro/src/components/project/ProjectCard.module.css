@@ -1,21 +1,22 @@
 .project_card {
-   width: 23%;
-   padding: 1rem;
+   width: 15rem;
    text-align: left;
-   margin: .5rem;
+   margin-bottom: 1rem;
    border-radius: 5px;  
    border: 1px solid #0f0f0f;
 }
 
 .project_card h2{
-   font-size: 1.3rem;
-   padding-bottom: .3rem;
-   border-bottom: 1px solid #0f0f0f;
+   color: #F2B705;
+   padding: .8rem 1rem;
+   background-color: #07070a;
+   font-size: 1.2rem;
    margin-bottom: 1rem;
 }
 
 .project_card p {
    margin-bottom: .5rem;
+   padding: 0 1rem;
 }
 
 .span_budget {
@@ -50,27 +51,29 @@
 .project_card_actions {
    margin-top: 1rem;
    display: flex;
-   justify-content: space-between;
+   flex-direction: column;
+   padding: 0 1rem ;
 }
 
 .btn_actions {
+   font-size: .9rem;
+   text-align: center;
    padding: .5rem 1rem;
    color: #0f0f0f;
+   margin-bottom: .5rem;
    border-radius: 5px;
    cursor: pointer;    
    transition: .5s;
    text-decoration: none;
-   height: fit-content;
    border: none;
    border: 1px solid #0f0f0f;
-   font-size: 1rem;
-}
-
-.btn_actions svg {
-   margin-right: .5rem;
 }
 
 .btn_actions:hover {
    color: #F2B705;
    background-color: #131318;
+}
+
+.btn_actions svg {
+   margin-right: .5rem;
 }

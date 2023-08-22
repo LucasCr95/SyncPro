@@ -34,9 +34,8 @@
    width: 100%;
    text-align: center;
    list-style: none;
-   padding: 0;
    overflow: hidden;
-   transition: all 1s ease;
+   transition: 1s;
    background-color: #07070a;
    padding: .5rem 0;
 }
@@ -65,11 +64,4 @@
 .navbar_list_item a:hover {
    color: #F2B705;
    background-color: #131318;
-}
-
-
-@media screen and (min-width: 425px) {
-   .menu_logo_container {
-      padding: 0 2rem;
-   }
 }

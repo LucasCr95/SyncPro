@@ -49,6 +49,10 @@
    .home_title_container {
       text-align: center;
    }
+
+   .home_title_container h1 {
+      font-size: 2.2rem;
+   }
    
    .home_img_container  img{
       margin-top: 5rem;

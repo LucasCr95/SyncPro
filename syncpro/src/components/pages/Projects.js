@@ -12,12 +12,26 @@ export default function Project() {
    const [ projects, setProjects ] = useState([])
    const [ removeLoading, setRemoveLoading ] = useState(false)
    const [ projectMessage, setProjectMessage ] = useState('')
+   const [ windowWidth, setWindowWidth ] = useState(window.innerWidth);
+   const [ btnText, setBtnText ] = useState('')
 
    const location = useLocation()
    let message = ''
    if(location.state) {
       message = location.state.message
    }
+
+   useEffect(() => {
+      window.addEventListener("resize", () => {
+         setWindowWidth(window.innerWidth);
+      })
+
+      windowWidth > 500 ? (
+         setBtnText('Novo Projeto')
+      ):(
+         setBtnText('+')
+      )
+   }, [windowWidth]);
 
    useEffect(() => {
       setTimeout(() => {
@@ -57,7 +71,7 @@ export default function Project() {
          {projectMessage && <Message msg={ projectMessage } type='sucess' />}
          <div className={ styles.projects_title_container }>
             <h1>Projetos</h1>
-            <LinkButton txtBtn='+' to='/newproject' />
+            <LinkButton to='/newproject' txtBtn={ btnText }/>
          </div>
          <div className={ styles.projects_cards_container }>
             {projects.length > 0 && 
@@ -76,7 +90,6 @@ export default function Project() {
             {removeLoading && projects.length === 0 && (
                <p>Não há projetos cadastrados</p>
             )}
-
          </div>
       </div>
    )

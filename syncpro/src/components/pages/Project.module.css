@@ -4,62 +4,67 @@
    padding: 2rem 1rem;
 }
 
-.info_container {
-   border-bottom: 1px solid #808080;
-   margin-bottom: 1rem;
-}
-
 .info_container,
 .services_container {
    width: 100%;
+   margin-bottom: 1rem;
    display: flex;
-   flex-direction: column;
+   justify-content: space-between;
+   flex-wrap: wrap;
 }
 
 .details_container,
+.details_services {
+   width: 400px;
+   text-align: left;
+   margin-bottom: 1rem;
+   border-radius: 5px;  
+   border: 1px solid #0f0f0f;
+   margin-right: 1rem;
+}
+
+.details_services {
+   border: none;
+}
+
+.details_container h1 {
+   color: #F2B705;
+   padding: .8rem 1rem;
+   background-color: #07070a;
+   font-size: 1.2rem;
+   margin-bottom: 1rem;
+}
+
+.details_container p {
+   margin-bottom: .5rem;
+   padding: 0 1rem;
+}
+
 .form_container,
-.details_services,
 .form_services {
    width: 100%;
 }
 
-.details_container h1,
-.services_container h2 {
-   font-size: 1.5rem;
-   padding-bottom: .2rem;
-   margin-bottom: .8rem;
-   width: fit-content;
-   border-bottom: 1px solid #808080;
-}
-.details_container p,
-.details_services p {
+.details_container p{
    margin-bottom: .5rem;
 }
 
-.details_container p span {
-   font-weight: bold;
-}
-
-.form_container,
-.form_services {
-   display: flex;
-   flex-direction: column;
-   align-items: flex-end;
-}
-
-.form_edit,
-.service_edit {
+.services_container h2 {
+   font-size: 1.5rem;
+   padding-bottom: .2rem;
+   margin: 2rem 0 1rem;
    width: 100%;
+   text-decoration: underline;
 }
 
 .btn {
    text-decoration: none;
    padding: .7rem 1rem;
    width: fit-content;
+   height: fit-content;
    background-color: #07070a;
    color: #ffffff;
    border-radius: 5px;
-   margin: 1rem 0;
    cursor: pointer;    
    border: none;
    transition: .5s;
@@ -70,22 +75,33 @@
    background-color: #131318;
 }
 
+.text_category {
+   display: inline-block;
+   margin-right: .5rem;
+   width: 12px;
+   height: 12px;
+   border-radius: 50%;
+   background-color: transparent;
+}
+
+.infra {
+   background-color: #7facf0;
+}
+
+.design {
+   background-color: #f07fc5;
+}
+
+.desenvolvimento {
+   background-color: #dbf07f;
+}
+
+.planejamento {
+   background-color: #f0a87f;
+}
+
 @media screen and (min-width: 768px) {
    .project_container {
       padding: 2rem 3rem;
-   }
-
-   .info_container {
-      background-color: cadetblue;
-      align-items: center;
-   }
-
-   .details_container,
-   .form_container {
-      background-color: #808080;
-      width: fit-content;
-   }
-   .details_container h1 {
-      font-size: 2rem;
    }
 }

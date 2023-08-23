@@ -145,13 +145,13 @@ export default function Project() {
                   <div className={ styles.details_container }>
                      <h1>{ project.name }</h1>
                      <p><span>Orçamento</span>: R$ { project.budget }</p>
-                     <p><span>Categoria</span>: { project.category.name }</p>
                      <p><span>Total utilizado</span>: { project.cost }</p>
+                     <p><span className={`${ styles.text_category } ${ styles[ project.category.name.toLowerCase() ]}` }></span> { project.category.name }</p>
                   </div>
-                  <div className={ styles.form_container }>
-                     <button onClick={ toggleProjectForm } className={ styles.btn }>
+                  <button onClick={ toggleProjectForm } className={ styles.btn }>
                         {!showProjectForm ? 'Editar' : 'Fechar'}
-                     </button>
+                  </button>
+                  <div className={ styles.form_container }>
                      {showProjectForm && (
                         <div className={ styles.form_edit }>
                            <ProjectForm 
@@ -164,8 +164,8 @@ export default function Project() {
                   </div>
                </div>
                <div className={ styles.services_container }>
+                  <h2>Serviços</h2>
                   <div className={ styles.details_services }>
-                     <h2>Serviços</h2>
                      {services && (
                         services.map((service) => (
                            <ServiceCard 
@@ -182,10 +182,10 @@ export default function Project() {
                         <p>Não há serviços</p>
                      }
                   </div>
+                  <button onClick={ toggleServiceForm } className={ styles.btn }>
+                     {!showServiceForm ? 'Adicionar' : 'Fechar'}
+                  </button>
                   <div className={ styles.form_services}>
-                     <button onClick={ toggleServiceForm } className={ styles.btn }>
-                        {!showServiceForm ? 'Adicionar' : 'Fechar'}
-                     </button>
                      {showServiceForm && (
                         <div className={ styles.service_edit }>
                            <ServiceForm 

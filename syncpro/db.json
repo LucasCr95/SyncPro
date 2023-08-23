@@ -18,15 +18,8 @@
         "id": "1",
         "name": "Infra"
       },
-      "cost": 8550,
-      "services": [
-        {
-          "name": "Compra de impressoras",
-          "cost": "8550",
-          "description": "Compra de sete impressoras multifuncional Epson EcoTank L5290",
-          "id": "2c461e5f-04e3-4a3f-9247-6b2ee9944983"
-        }
-      ],
+      "cost": 0,
+      "services": [],
       "id": 2
     },
     {

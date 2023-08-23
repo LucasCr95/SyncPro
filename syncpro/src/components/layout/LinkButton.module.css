@@ -1,10 +1,10 @@
 .btn {
-   font-size: .9rem;
+   font-size: .8rem;
    width: fit-content;
    height: fit-content;
    border: none;
    cursor: pointer;
-   padding: .5rem 1rem;
+   padding: .7rem 1rem;
    color: #fff;
    text-decoration: none;
    background-color: #07070a;
@@ -16,3 +16,9 @@
    color: #F2B705;
    background-color: #131318;
 } 
+
+@media screen and (min-width: 768px) {
+   .btn {
+      font-size: .9rem;
+   }
+}

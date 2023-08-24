@@ -15,10 +15,9 @@
 }
 
 .projects_title_container h1 {
-   font-size: 2rem;
+   font-size: 1.8rem;
    width: fit-content;
    border-bottom: 1px solid #555555;
-   margin-bottom: 2rem;
 }
 
 .projects_cards_container {
@@ -31,6 +30,7 @@
 
 @media screen and (min-width: 768px) {
    .projects_container {
+      margin-top: 2rem;
       padding: 2rem 3rem;
    }
 }

@@ -7,7 +7,7 @@
 }
 
 .title_container h1 {
-   font-size: 2rem;
+   font-size: 1.8rem;
    margin-bottom: 2rem;
    border-bottom: 1px solid #808080;
    width: fit-content;
@@ -28,7 +28,8 @@
 
 @media screen and (min-width: 768px) {
    .company_container {
-      padding: 3rem;
+      margin-top: 2rem;
+      padding: 2rem 3rem;
    }
 
    .title_container {

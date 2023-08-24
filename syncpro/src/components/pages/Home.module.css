@@ -59,3 +59,27 @@
       width: 500px;
    }
 }
+
+@media screen and (min-width: 960px) {
+   .home_container {
+      margin-top: 0;
+      flex-direction: row;
+      padding: 0 0 2rem;
+   }
+
+   .home_title_container,
+   .home_img_container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+   }
+
+   .home_title_container {
+      align-items: flex-start;
+   }
+
+   .home_img_container {
+      margin: 0;
+   }
+   
+}

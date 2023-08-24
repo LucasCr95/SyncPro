@@ -4,6 +4,7 @@
    border-radius: 5px;
    display: flex;
    justify-content: space-between;
+   margin-bottom: 1rem;
 }
 
 .service_card p {

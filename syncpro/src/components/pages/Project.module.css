@@ -40,13 +40,13 @@
    padding: 0 1rem;
 }
 
+.details_container p span {
+   font-weight: bold;
+}
+
 .form_container,
 .form_services {
    width: 100%;
-}
-
-.details_container p{
-   margin-bottom: .5rem;
 }
 
 .services_container h2 {
@@ -104,5 +104,17 @@
 @media screen and (min-width: 768px) {
    .project_container {
       padding: 2rem 3rem;
+   }
+}
+
+@media screen and (min-width: 1200px) {
+   .project_container {
+      margin-top: 0;
+      padding: 5rem 0;
+   }
+
+   .info_container,
+   .services_container {
+      flex-direction: column;
    }
 }

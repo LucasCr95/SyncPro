@@ -76,3 +76,22 @@
       align-items: center;
    }
 }
+
+@media screen and (min-width: 1200px) {
+   .contact_container {
+      margin-top: 0;
+      flex-direction: row;
+      align-items: center;
+      padding: 0 0 2rem;
+   }
+
+   .title_container,
+   .info_container {
+      width: 50%;
+   }
+
+   .title_container {
+      justify-content: flex-start;
+   }
+
+}

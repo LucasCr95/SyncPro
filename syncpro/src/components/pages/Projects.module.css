@@ -34,3 +34,14 @@
       padding: 2rem 3rem;
    }
 }
+
+@media screen and (min-width: 1200px) {
+   .projects_container {
+      margin-top: 0;
+      padding: 3rem 0;
+   }
+
+   .projects_cards_container {
+      justify-content: space-between;
+   }
+}

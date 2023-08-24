@@ -47,3 +47,25 @@
       margin: 2rem auto 0;
    }
 }
+
+@media screen and (min-width: 1200px) {
+   .company_container {
+      margin-top: 0;
+      flex-direction: row;
+      padding: 0 0 2rem;
+   }
+
+   .title_container,
+   .img_container {
+      width: 50%;
+      justify-content: center;
+   }
+
+   .title_container {
+      align-items: flex-start;
+   }
+
+   .img_container {
+      align-items: flex-end;
+   }
+}

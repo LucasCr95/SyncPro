@@ -7,13 +7,18 @@
         "id": "3",
         "name": "Desenvolvimento"
       },
-      "cost": 3000,
+      "cost": 4000,
       "services": [
         {
           "name": "Contratar um UI Design",
           "cost": "3000",
           "description": "Layout site desktop/mobile",
           "id": "40cdcc3d-fcfa-44bd-83e7-85a4e0beb8a0"
+        },
+        {
+          "name": "Contratar UX Design",
+          "cost": "1000",
+          "id": "ba1a852e-5f0a-4855-b77b-29b4af6ea1b9"
         }
       ],
       "id": 1
@@ -50,6 +55,17 @@
       "cost": 0,
       "services": [],
       "id": 4
+    },
+    {
+      "name": "Manutenção Rede",
+      "budget": "2000",
+      "category": {
+        "id": "1",
+        "name": "Infra"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 5
     }
   ],
   "categories": [

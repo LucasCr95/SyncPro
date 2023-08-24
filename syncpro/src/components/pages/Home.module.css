@@ -81,6 +81,6 @@
 
    .home_img_container {
       margin: 0;
+      align-items: flex-end;
    }
-   
 }

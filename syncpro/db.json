@@ -7,8 +7,15 @@
         "id": "3",
         "name": "Desenvolvimento"
       },
-      "cost": 0,
-      "services": [],
+      "cost": 3000,
+      "services": [
+        {
+          "name": "Contratar um UI Design",
+          "cost": "3000",
+          "description": "Layout site desktop/mobile",
+          "id": "40cdcc3d-fcfa-44bd-83e7-85a4e0beb8a0"
+        }
+      ],
       "id": 1
     },
     {

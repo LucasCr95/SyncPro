@@ -17,7 +17,7 @@
 - Componentização
 - Componente de adição de projetos
 - Componente de visualização de projetos
-- Componente de exclusão de projeto
+- Componente de exclusão de projetos
 - Componente de edição de projetos
 
 <hr>

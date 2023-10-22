@@ -66,6 +66,23 @@
       "cost": 0,
       "services": [],
       "id": 5
+    },
+    {
+      "name": "Ajustes ecommerce",
+      "budget": "2000",
+      "category": {
+        "id": "3",
+        "name": "Desenvolvimento"
+      },
+      "cost": 1000,
+      "services": [
+        {
+          "name": "Manutenção corretiva formas de pagamento",
+          "cost": "1000",
+          "id": "845280bc-474a-4924-976d-e8e7f0cad224"
+        }
+      ],
+      "id": 6
     }
   ],
   "categories": [

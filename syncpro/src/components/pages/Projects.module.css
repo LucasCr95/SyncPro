@@ -44,6 +44,6 @@
    }
 
    .projects_cards_container {
-      justify-content: space-between;
+      justify-content: flex-start;
    }
 }

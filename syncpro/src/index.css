@@ -5,7 +5,7 @@
   font-family: 'Roboto', sans-serif;
 } 
 
-#root {
+#root, body, html {
   background-color: #efefef;
   height: 100vh;
 }

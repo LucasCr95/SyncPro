@@ -22,7 +22,6 @@
 <h3>Código:</h3>
 
 - React
-- API Json Server
   
 <hr>
 <h3>Ferramentas:</h3>

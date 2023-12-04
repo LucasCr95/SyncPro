@@ -4,8 +4,6 @@
  <img src="https://github.com/LucasCr95/SyncPro/blob/main/syncpro/src/img/syncpro_screen.png" target="_blank">
 </div>
 <br>
-📚 Projeto desenvolvido no curso de React
-<br>
 👉 O objetivo foi desenvolver um sistema web para gerenciamento de projetos.
 <h2>Sobre o Projeto:</h2>
 

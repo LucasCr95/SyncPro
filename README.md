@@ -11,7 +11,6 @@
 
 - Criação da interface
 - Responsividade
-- Conexão API com Json Server
 - Componentização
 - Componente de adição de projetos
 - Componente de visualização de projetos
